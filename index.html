@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Memory Crash!</title>
+  <link rel="shortcut icon" type="x-icon" href="source/BRAIN.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Rajdhani&family=Roboto:ital@0;1&family=Source+Code+Pro&family=Varela+Round&family=Vibur&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="source/memory-game.css">
+</head>
+<body>
+
+  <div class="startScreen">
+    <div class="startMenu">
+      <h1 class="neon">
+        <span class="neon1">
+          M<span class="neonDelay1">e</span>mory
+        </span>
+        <span class="neon2">
+          C<span class="neonDelay2">r</span>a<span class="neonDelay3">s</span>h!
+        </span>
+      </h1>
+      <form id="startForm">
+        <p>Welcome to <span>Memory Crash</span>, a memory card game. Find all matching pairs of cards with the same background color to win. To get on the score board match all the cards in the fewest amount of guesses. The more cards you play with, the more weight your score gets! To start, pick any even number from 4 to 100 as the number of cards you want to play with, then click "PLAY". You can reset a game any time by clicking on "RESET". Have fun!</p>
+        <div class="formQ">
+          <label for="cardCount">How Many Cards?</label>
+          <input type="text" id="cardCount" title="Choose an even # of cards between 4 and 100" required>
+        </div>
+        <div class="formQ">
+          <label for="play"></label>
+          <input type="submit" value="PLAY" id="play">
+        </div>
+      </form>
+    </div>
+  </div>
+
+<div id="game">
+  <div class="menu">
+    <div class="logo">
+      <img src="source/BRAIN.png" alt="Brain Logo">
+      <h2><span>Memory</span><br>Crash</h2>
+    </div>
+    <div class="scoreBoard">
+     <table>
+      <tr>
+        <th>Place</th>
+        <th>Success Rate</th>
+        <th>Cards Played</th>
+      </tr>
+      <tr>
+        <td>1st</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>2nd</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>3rd</td>
+        <td></td>
+        <td></td>
+      </tr>
+     </table>
+    </div>
+    <div class="score">
+      <p>Guesses Made: <span></span></p>
+      <p>Matches Made: <span></span></p>
+      <p>Success Rate: <span></span></p>
+    </div>
+    <div class="reset">
+      <label for="reset"></label>
+      <input type="button" id="reset" value="RESET">
+    </div>
+  </div>
+  <div id="board">
+  </div>
+
+<script src="source/memory-game.js"></script>
+
+</body>
+</html>
